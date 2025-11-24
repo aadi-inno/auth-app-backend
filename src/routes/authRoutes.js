@@ -1,5 +1,5 @@
 import express from "express";
-import { registerUser ,logoutUser,loginUser,verifyOtp} from "../controllers/authControllers.js";
+import { registerUser ,logoutUser,loginUser,verifyOtp,googleLogin} from "../controllers/authControllers.js";
 import {sendChangePasswordOtp,verifyChangePasswordOtp,resetPassword} from "../controllers/changePasswordControllers.js"
 
 const router = express.Router();
@@ -8,6 +8,7 @@ router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.post("/verify-otp", verifyOtp);
 router.get("/logout", logoutUser);
+router.post('/google', googleLogin);
 
 //CHANGE PASSWORD ROUTES
 router.post("/send-change-password-otp",sendChangePasswordOtp);
