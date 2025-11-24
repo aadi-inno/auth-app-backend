@@ -1,7 +1,3 @@
-# ============================
-# Node / Express Backend Ignore
-# ============================
-
 # Node modules
 /node_modules/
 
